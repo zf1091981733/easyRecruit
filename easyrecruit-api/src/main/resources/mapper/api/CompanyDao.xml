@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="taru.easyrecruit.api.dao.CompanyDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="taru.easyrecruit.api.entity.CompanyEntity" id="companyMap">
+        <result property="companyId" column="company_id"/>
+        <result property="companyUuid" column="company_uuid"/>
+        <result property="companyLogo" column="company_logo"/>
+        <result property="companyName" column="company_name"/>
+        <result property="staffName" column="staff_name"/>
+        <result property="number" column="number"/>
+        <result property="address" column="address"/>
+        <result property="companyResume" column="company_resume"/>
+        <result property="createTime" column="create_time"/>
+    </resultMap>
+
+
+</mapper>

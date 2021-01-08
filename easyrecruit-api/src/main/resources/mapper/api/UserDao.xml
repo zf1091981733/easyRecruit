@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="taru.easyrecruit.api.dao.UserDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="taru.easyrecruit.api.entity.UserEntity" id="userMap">
+        <result property="userId" column="user_id"/>
+        <result property="userUuid" column="user_uuid"/>
+        <result property="userLogo" column="user_logo"/>
+        <result property="nickname" column="nickname"/>
+        <result property="phone" column="phone"/>
+        <result property="email" column="email"/>
+        <result property="status" column="status"/>
+        <result property="userRole" column="user_role"/>
+        <result property="userStudentAuthentication" column="user_student_authentication"/>
+        <result property="userStudentId" column="user_student_id"/>
+        <result property="userCompanyAuthentication" column="user_company_authentication"/>
+        <result property="userCompanyId" column="user_company_id"/>
+        <result property="salt" column="salt"/>
+        <result property="createTime" column="create_time"/>
+        <result property="password" column="password"/>
+    </resultMap>
+
+
+</mapper>

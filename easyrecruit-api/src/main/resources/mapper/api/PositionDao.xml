@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="taru.easyrecruit.api.dao.PositionDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="taru.easyrecruit.api.entity.PositionEntity" id="positionMap">
+        <result property="positionId" column="position_id"/>
+        <result property="positionUuid" column="position_uuid"/>
+        <result property="title" column="title"/>
+        <result property="positionName" column="position_name"/>
+        <result property="positionType" column="position_type"/>
+        <result property="address" column="address"/>
+        <result property="salary" column="salary"/>
+        <result property="positionInfo" column="position_info"/>
+        <result property="positionRequirement" column="position_requirement"/>
+        <result property="status" column="status"/>
+        <result property="authentication" column="authentication"/>
+        <result property="createTime" column="create_time"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+
+
+</mapper>
