@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import taru.easyrecruit.api.common.utils.R;
 import taru.easyrecruit.api.common.utils.PageUtils;
-import taru.easyrecruit.api.entity.ResumeEntity;
+import taru.easyrecruit.api.dao.entity.ResumeEntity;
 import taru.easyrecruit.api.service.ResumeService;
 
 
@@ -30,7 +30,7 @@ public class ResumeController {
     private ResumeService resumeService;
 
     /**
-     * 列表
+     * 查询学生简历列表
      */
     @RequestMapping("/list")
    // @RequiresPermissions("api:resume:list")
@@ -59,7 +59,6 @@ public class ResumeController {
    // @RequiresPermissions("api:resume:save")
     public R save(@RequestBody ResumeEntity resume){
 		resumeService.save(resume);
-
         return R.ok();
     }
 

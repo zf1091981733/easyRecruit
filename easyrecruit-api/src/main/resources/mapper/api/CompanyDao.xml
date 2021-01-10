@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.CompanyDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.CompanyEntity" id="companyMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.CompanyEntity" id="companyMap">
         <result property="companyId" column="company_id"/>
         <result property="companyUuid" column="company_uuid"/>
         <result property="companyLogo" column="company_logo"/>

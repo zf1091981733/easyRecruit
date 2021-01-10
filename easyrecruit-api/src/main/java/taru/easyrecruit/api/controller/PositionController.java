@@ -15,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import taru.easyrecruit.api.common.utils.PageUtils;
 import taru.easyrecruit.api.common.utils.R;
-import taru.easyrecruit.api.entity.PositionEntity;
+import taru.easyrecruit.api.common.utils.UuIdUtils;
+import taru.easyrecruit.api.dao.entity.PositionEntity;
 import taru.easyrecruit.api.service.PositionService;
 
 
@@ -68,6 +69,7 @@ public class PositionController {
     @RequestMapping("/save")
    // @RequiresPermissions("api:position:save")
     public R save(@RequestBody PositionEntity position){
+        position.setPositionUuid(UuIdUtils.getUUID());
         position.setCreateTime(new Date(System.currentTimeMillis()));
 		positionService.save(position);
 

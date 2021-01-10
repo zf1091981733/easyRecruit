@@ -1,4 +1,4 @@
-package taru.easyrecruit.api.entity;
+package taru.easyrecruit.api.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -15,38 +15,38 @@ import lombok.Data;
  * @date 2021-01-03 20:41:19
  */
 @Data
-@TableName("api_delivery")
-public class DeliveryEntity implements Serializable {
+@TableName("api_back")
+public class BackEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * 
 	 */
 	@TableId
-	private Integer deliveryId;
+	private Integer backId;
 	/**
-	 * 投递审核编号
+	 * 反馈编号
 	 */
-	private String deliveryUuid;
+	private String backUuid;
 	/**
-	 * 职位id
+	 * 反馈类型（举报、意见）
 	 */
-	private Integer positionId;
+	private String backType;
 	/**
-	 * 用户id(学生)
+	 * 内存
 	 */
-	private Integer userId;
+	private String backContent;
 	/**
-	 * 简历id
+	 * 提交时间
 	 */
-	private Integer resumeId;
+	private Date createTime;
 	/**
-	 * 状态（简历筛选中、初选、笔试、面试、待发offer、结束）
+	 * 状态（未处理、处理中、已处理）
 	 */
 	private String status;
 	/**
-	 * 
+	 * 用户id
 	 */
-	private Date createTime;
+	private Integer userId;
 
 }

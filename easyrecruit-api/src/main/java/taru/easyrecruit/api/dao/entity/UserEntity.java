@@ -1,10 +1,9 @@
-package taru.easyrecruit.api.entity;
+package taru.easyrecruit.api.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
@@ -33,6 +32,10 @@ public class UserEntity implements Serializable {
 	 * 头像图片url地址
 	 */
 	private String userLogo;
+	/**
+	 * 用户名
+	 */
+	private String userName;
 	/**
 	 * 昵称
 	 */

@@ -2,7 +2,7 @@ package taru.easyrecruit.api.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import taru.easyrecruit.api.common.utils.PageUtils;
-import taru.easyrecruit.api.entity.CompanyEntity;
+import taru.easyrecruit.api.dao.entity.CompanyEntity;
 
 import java.util.Map;
 

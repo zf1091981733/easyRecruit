@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.PositionDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.PositionEntity" id="positionMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.PositionEntity" id="positionMap">
         <result property="positionId" column="position_id"/>
         <result property="positionUuid" column="position_uuid"/>
         <result property="title" column="title"/>

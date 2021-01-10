@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import taru.easyrecruit.api.common.utils.R;
 import taru.easyrecruit.api.common.utils.PageUtils;
-import taru.easyrecruit.api.entity.DeliveryEntity;
+import taru.easyrecruit.api.dao.entity.DeliveryEntity;
 import taru.easyrecruit.api.service.DeliveryService;
 
 

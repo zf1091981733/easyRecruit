@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.CommentDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.CommentEntity" id="commentMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.CommentEntity" id="commentMap">
         <result property="commentId" column="comment_id"/>
         <result property="commentUuid" column="comment_uuid"/>
         <result property="userId" column="user_id"/>

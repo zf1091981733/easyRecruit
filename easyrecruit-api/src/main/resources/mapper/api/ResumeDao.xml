@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.ResumeDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.ResumeEntity" id="resumeMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.ResumeEntity" id="resumeMap">
         <result property="resumeId" column="resume_id"/>
         <result property="resumeUuid" column="resume_uuid"/>
         <result property="resumeName" column="resume_name"/>

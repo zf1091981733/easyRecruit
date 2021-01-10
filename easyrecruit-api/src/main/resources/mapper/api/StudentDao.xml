@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.StudentDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.StudentEntity" id="studentMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.StudentEntity" id="studentMap">
         <result property="studentId" column="student_id"/>
         <result property="studentUuid" column="student_uuid"/>
         <result property="studentLogo" column="student_logo"/>

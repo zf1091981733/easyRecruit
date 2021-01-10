@@ -9,7 +9,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import taru.easyrecruit.api.common.utils.PageUtils;
 import taru.easyrecruit.api.dao.CompanyDao;
-import taru.easyrecruit.api.entity.CompanyEntity;
+import taru.easyrecruit.api.dao.entity.CompanyEntity;
 import taru.easyrecruit.api.service.CompanyService;
 
 

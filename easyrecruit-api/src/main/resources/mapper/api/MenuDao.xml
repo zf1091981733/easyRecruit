@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.MenuDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.MenuEntity" id="menuMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.MenuEntity" id="menuMap">
         <result property="menuId" column="menu_id"/>
         <result property="menuUuid" column="menu_uuid"/>
         <result property="menuName" column="menu_name"/>

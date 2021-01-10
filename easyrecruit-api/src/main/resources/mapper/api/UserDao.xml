@@ -4,10 +4,11 @@
 <mapper namespace="taru.easyrecruit.api.dao.UserDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.UserEntity" id="userMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.UserEntity" id="userMap">
         <result property="userId" column="user_id"/>
         <result property="userUuid" column="user_uuid"/>
         <result property="userLogo" column="user_logo"/>
+        <result property="userName" column="user_name"/>
         <result property="nickname" column="nickname"/>
         <result property="phone" column="phone"/>
         <result property="email" column="email"/>

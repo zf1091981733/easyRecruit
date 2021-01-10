@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import taru.easyrecruit.api.common.utils.PageUtils;
 import taru.easyrecruit.api.common.utils.R;
-import taru.easyrecruit.api.entity.CommentEntity;
+import taru.easyrecruit.api.dao.entity.CommentEntity;
 import taru.easyrecruit.api.service.CommentService;
 
 

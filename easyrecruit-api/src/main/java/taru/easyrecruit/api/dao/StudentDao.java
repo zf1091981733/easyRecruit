@@ -1,6 +1,6 @@
 package taru.easyrecruit.api.dao;
 
-import taru.easyrecruit.api.entity.StudentEntity;
+import taru.easyrecruit.api.dao.entity.StudentEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

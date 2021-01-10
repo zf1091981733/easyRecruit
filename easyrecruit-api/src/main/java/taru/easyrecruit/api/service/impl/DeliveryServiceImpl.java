@@ -8,7 +8,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import taru.easyrecruit.api.common.utils.PageUtils;
 import taru.easyrecruit.api.dao.DeliveryDao;
-import taru.easyrecruit.api.entity.DeliveryEntity;
+import taru.easyrecruit.api.dao.entity.DeliveryEntity;
 import taru.easyrecruit.api.service.DeliveryService;
 
 

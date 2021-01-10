@@ -4,7 +4,7 @@
 <mapper namespace="taru.easyrecruit.api.dao.BackDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="taru.easyrecruit.api.entity.BackEntity" id="backMap">
+    <resultMap type="taru.easyrecruit.api.dao.entity.BackEntity" id="backMap">
         <result property="backId" column="back_id"/>
         <result property="backUuid" column="back_uuid"/>
         <result property="backType" column="back_type"/>

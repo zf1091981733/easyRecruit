@@ -1,4 +1,4 @@
-package taru.easyrecruit.api.entity;
+package taru.easyrecruit.api.dao.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
