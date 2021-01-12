@@ -33,6 +33,10 @@ public class ResumeEntity implements Serializable {
 	 */
 	private String resumeName;
 	/**
+	 * 文件id
+	 */
+	private String fileId;
+	/**
 	 * 文件名
 	 */
 	private String fileName;

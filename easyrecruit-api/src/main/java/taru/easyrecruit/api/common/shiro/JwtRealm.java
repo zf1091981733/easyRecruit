@@ -1,6 +1,7 @@
 package taru.easyrecruit.api.common.shiro;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
+import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
@@ -55,7 +56,7 @@ public class JwtRealm extends AuthorizingRealm {
         JwtUtil jwtUtil = new JwtUtil(TokenValue.SALT);
         try {
             jwtUtil.isVerify(jwt);
-        }catch (JWTDecodeException e){
+        }catch (TokenExpiredException e){
             throw new AuthenticationException("认证失败,token非法或过期！");
         }
         //下面是验证这个user是否是真实存在的
