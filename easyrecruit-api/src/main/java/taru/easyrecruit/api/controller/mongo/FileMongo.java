@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
+import taru.easyrecruit.api.controller.mongo.doc.FileDoc;
 
 import javax.annotation.PostConstruct;
 import javax.servlet.http.HttpServletRequest;
@@ -33,7 +34,7 @@ public class FileMongo {
     /**
      * 下载文件
      */
-    public static void downLoad(FileDoc file,HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public static void downLoad(FileDoc file, HttpServletRequest request, HttpServletResponse response) throws IOException {
         byte[] data = null;
         String fileName =file.getName();
         if (file!=null){

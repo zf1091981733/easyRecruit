@@ -1,4 +1,4 @@
-package taru.easyrecruit.api.controller.mongo;
+package taru.easyrecruit.api.controller.mongo.doc;
 
 import lombok.Data;
 import org.bson.types.Binary;

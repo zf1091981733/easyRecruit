@@ -29,6 +29,5 @@ public class TestUuid {
     }
     @Test
     public void getUuid(){
-        System.out.println(UuIdUtils.getUUID());
     }
 }

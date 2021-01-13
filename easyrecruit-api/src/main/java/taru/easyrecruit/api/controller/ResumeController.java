@@ -3,10 +3,11 @@ package taru.easyrecruit.api.controller;
 import java.io.*;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
-import org.bson.types.Binary;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,10 +17,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import taru.easyrecruit.api.common.utils.R;
-import taru.easyrecruit.api.common.utils.PageUtils;
 import taru.easyrecruit.api.common.utils.SessionUtil;
 import taru.easyrecruit.api.common.utils.UuIdUtils;
-import taru.easyrecruit.api.controller.mongo.FileDoc;
+import taru.easyrecruit.api.controller.mongo.doc.FileDoc;
 import taru.easyrecruit.api.controller.mongo.FileMongo;
 import taru.easyrecruit.api.dao.entity.ResumeEntity;
 import taru.easyrecruit.api.service.ResumeService;
@@ -49,10 +49,10 @@ public class ResumeController {
      */
     @RequestMapping("/list")
    // @RequiresPermissions("api:resume:list")
-    public R list(@RequestParam Map<String, Object> params){
-        PageUtils page = resumeService.queryPage(params);
-
-        return R.ok().put("page", page);
+    public R list(@RequestParam Map<String, Object> params,HttpServletRequest request){
+        String userId = String.valueOf(SessionUtil.getUserId(request));
+        List<ResumeEntity> resumes = resumeService.list(new QueryWrapper<ResumeEntity>().eq("userId", userId));
+        return R.ok("简历查询成功！").put("data", resumes);
     }
 
 

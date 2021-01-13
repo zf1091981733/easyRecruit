@@ -10,4 +10,8 @@ public interface TokenValue {
     public static long TOKEN_REDIS_TIME=12*60*60;   //redis中token过期时间
 
     public static String SALT="4fdc56cb0";
+
+    public enum ChaimList{
+        userId,userName,creatTime
+    }
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import taru.easyrecruit.api.common.dict.TokenValue;
+import taru.easyrecruit.api.common.dict.TokenValue.ChaimList;
 import taru.easyrecruit.api.common.utils.JwtUtil;
 import taru.easyrecruit.api.common.utils.R;
 import taru.easyrecruit.api.common.utils.RedisOperator;
@@ -39,9 +40,9 @@ public class LoginController {
         //设置token
         JwtUtil jwtUtil = new JwtUtil(TokenValue.SALT);
         Map<String, Object> chaim = new HashMap<>(); //荷载
-        chaim.put("userId",user.getUserId());
-        chaim.put("userName",user.getUserName());
-        chaim.put("creatTime",new Date(System.currentTimeMillis()));
+        chaim.put(ChaimList.userId.toString(),user.getUserId());
+        chaim.put(ChaimList.userName.toString(),user.getUserName());
+        chaim.put(ChaimList.creatTime.toString(),new Date(System.currentTimeMillis()));
         String jwtToken = jwtUtil.encode(username, TokenValue.TOKEN_TIME, chaim);
         //redis设置token过期策略
         redis.set(user.getUserUuid(),jwtToken,TokenValue.TOKEN_REDIS_TIME);
@@ -54,4 +55,11 @@ public class LoginController {
         data.put("loginTime",new Date(System.currentTimeMillis()));
         return R.ok("登陆成功").put("token", jwtToken).put("data",data);
     }
+
+    @RequestMapping("/logout")
+    public R logout(){
+
+        return R.ok("退出登陆成功");
+    }
+
 }

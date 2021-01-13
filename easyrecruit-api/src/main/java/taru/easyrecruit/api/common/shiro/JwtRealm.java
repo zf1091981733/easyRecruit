@@ -2,7 +2,6 @@ package taru.easyrecruit.api.common.shiro;
 
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.authc.*;
@@ -11,8 +10,8 @@ import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import taru.easyrecruit.api.common.dict.TokenValue;
+import taru.easyrecruit.api.common.dict.TokenValue.ChaimList;
 import taru.easyrecruit.api.common.utils.JwtUtil;
-import taru.easyrecruit.api.common.utils.Query;
 import taru.easyrecruit.api.common.utils.RedisOperator;
 import taru.easyrecruit.api.dao.entity.UserEntity;
 import taru.easyrecruit.api.service.UserService;
@@ -60,7 +59,7 @@ public class JwtRealm extends AuthorizingRealm {
             throw new AuthenticationException("认证失败,token非法或过期！");
         }
         //下面是验证这个user是否是真实存在的
-        Integer userId = (Integer) jwtUtil.decode(jwt).get("userId");//判断数据库中username是否存在
+        Integer userId = (Integer) jwtUtil.decode(jwt).get(ChaimList.userId.toString());//判断数据库中username是否存在
         UserEntity user = userService.getById(userId);
         if (user == null){
             throw new UnknownAccountException("用户不存在！");

@@ -10,6 +10,6 @@ public class SessionUtil {
     public static Integer getUserId(HttpServletRequest request){
         String jwt = request.getHeader(TokenValue.TOKEN_NAME);
         JwtUtil jwtUtil = new JwtUtil(TokenValue.SALT);
-        return (Integer) jwtUtil.decode(jwt).get("userId");
+        return (Integer) jwtUtil.decode(jwt).get(TokenValue.ChaimList.userId.toString());
     }
 }
